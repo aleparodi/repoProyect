@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+header {
+    background-color: #555352;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botonera {
+    margin-right: 20px;
+}
+
+.botonera ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.botonera ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #262424;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+/* SECCION SERVICIOS */
+.contenedor {
+    text-align: center;
+    margin: 50px;
+    padding: 30px;
+    border: double 6px #99A799;
+    border-radius: 4px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+}
+
+.contenedor h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contenedor p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.imagenEncabezado {
+   width: 100%;
+   /* height: calc(100vh - 100px);*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+   
+}
+
+/*SECCION GALERIA */
+
+.imagenGaleria {
+    height: 200px;
+}
+
+.imagenGaleria:hover {
+    filter: grayscale(100%);
+    
+}
+
+.imagenContenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  /*  flex-wrap: wrap;*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+}
+
+/* SECCION FOOTER */
+
+footer {
+    background-color: #FEF5ED;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer ul li a {
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+footer h4 {
+    color: #99A799;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+}
+
+/* BOTON DE WHATSAPP */
+
+.botonWhatsApp img {
+    width: 70px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.empresaNuestra {
+    text-align: center;
+    margin: 50px;
+    padding: 30px;
+    border: double 6px #36136b;
+    border-radius: 4px;
+}
+
+/* APLICAMOS GRID AREA */
+
+.bodyPadreGrid {
+    display: grid;
+    grid-template-areas: 
+    "inicio inicio inicio"
+    "imagenCentral imagenCentral ."
+    "servicios servicio servicio"
+     "galeria galeria galeria"
+    "footer footer footer";
+}
+
+
+header {
+    grid-area: inicio;
+  position: sticky;
+    top: 0px;
+}
+
+.contenedorImagen {
+    grid-area: imagenCentral;
+}
+
+#servicios {
+    grid-area: servicios;
+}
+
+#galeria {
+    grid-area: galeria;
+}
+ 
+#footer {
+    grid-area: footer;
+}
+@media screen and (max-width: 900px) {
+    .botonera ul li a{
+        display: none;
+    }
+    .imagenContenedor{
+        flex-wrap: wrap;
+    }
+    footer ul li a{
+        display: none;
+    }
+     .botonWhatsApp img{
+    width: 40px;
+    } 
+}
